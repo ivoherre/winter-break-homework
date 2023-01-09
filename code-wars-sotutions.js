@@ -2,32 +2,32 @@
 
 //Multiples of 3 or 5
 function solution(number) {
- if (number <= 0) { // 
-return 0;
+ if (number <= 0) { // checking to see if the number is less than 0
+return 0; // if so returns 0
 }
-let multiples = 0;
-for (let i = 0; i < number; i++){
-if (i % 3 === 0 || i % 5 === 0) { // 
-multiples += i;
+let multiples = 0; // counter used to add multiples of 3 or multiples of 5
+for (let i = 0; i < number; i++){ // for loop is used to check if current number is a multiple of 3 or 5
+if (i % 3 === 0 || i % 5 === 0) { // to check if current number is a multiple of 3 or 5 
+multiples += i; // multiples of 3 or 5 are adding into the counter sum
  } 
 }
-return multiples;
-}
+return multiples; // return sum outside of for loop
+} 
 
 
 // Whos likes it?
 
 function likes(names) {
-  if (names.length == 0){
+  if (names.length == 0){ // finds number of elements in the array. If names.length is 0 means no elements return no one likes this
     return "no one likes this"
   } else if (names.length == 1){
-    return `${names[0]} likes this`
+    return `${names[0]} likes this` // if there is one element in the array, return the name element like this'
   } else if (names.length == 2){
-    return `${names[0]} and ${names[1]} like this`
+    return `${names[0]} and ${names[1]} like this` // if there's 2 elements in the array return the first and second element like this'
   } else if (names.length == 3){
-    return `${names[0]}, ${names[1]} and ${names[2]} like this`
+    return `${names[0]}, ${names[1]} and ${names[2]} like this` // 3 elements in the array return, first + second element and third like this'
   } else if (names.length >= 4){
-    return `${names[0]}, ${names[1]} and ${names.length - 2} others like this`
+    return `${names[0]}, ${names[1]} and ${names.length - 2} others like this` // there are 4 or more elements return 'first element, second, and the total number of elements not including the first 2 elemts like this'
   }
 }
 
